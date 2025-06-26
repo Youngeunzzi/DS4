@@ -5,13 +5,13 @@ python-dotenv
 # --- LangChain & OpenAI ---
 langchain
 langchain-community
-langchain-openai
 langchain-text-splitters
 langchain-chroma
+openai  # langchain-openai 대신
 
 # --- PDF 로더용 ---
-pypdf
-pypdfium2==4.20.0   # wheel 제공 버전
+pypdf       # 유지
+# pypdfium2==4.20.0  ← 일단 주석 처리 (필요 시 로컬에서만 설치)
 
 # --- 임베딩 검색용 ---
 faiss-cpu==1.7.4
