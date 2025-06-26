@@ -14,7 +14,7 @@ pypdf       # 유지
 # pypdfium2==4.20.0  ← 일단 주석 처리 (필요 시 로컬에서만 설치)
 
 # --- 임베딩 검색용 ---
-faiss-cpu==1.7.4
+chromadb==0.4.24
 sentence-transformers
 
 # --- 기타 ---
