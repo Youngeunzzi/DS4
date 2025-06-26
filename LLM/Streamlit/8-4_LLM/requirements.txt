@@ -1,26 +1,21 @@
+# --- Streamlit & 기본 ---
+streamlit
+python-dotenv
+
+# --- LangChain & OpenAI ---
 langchain
-langchain_community
-langchain_openai
-langchain-anthropic
+langchain-community
+langchain-openai
 langchain-text-splitters
 langchain-chroma
-langchain-ollama
-langchain-experimental
 
-anthropic
-openai
-
-nltk==3.8.1
-pypdfium2
+# --- PDF 로더용 ---
 pypdf
-rapidocr-onnxruntime
+pypdfium2==4.20.0   # wheel 제공 버전
+
+# --- 임베딩 검색용 ---
+faiss-cpu==1.7.4
 sentence-transformers
-unstructured
-unstructured[pdf]
 
-python-pptx
-python-magic-bin==0.4.14
-
-faiss-cpu
-grandalf 
-streamlit
+# --- 기타 ---
+nltk==3.8.1
