@@ -7,6 +7,7 @@ langchain
 langchain-community
 langchain-text-splitters
 langchain-chroma
+langchain-openai
 openai  # langchain-openai 대신
 
 # --- PDF 로더용 ---
