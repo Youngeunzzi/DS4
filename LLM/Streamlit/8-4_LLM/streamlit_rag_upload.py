@@ -33,7 +33,7 @@ def load_pdf(_file):
 def create_vector_store(_docs):
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
     split_docs = text_splitter.split_documents(_docs)
-    vectorstore = Chroma.from_documents(split_docs, OpenAIEmbeddings(model='text-embedding-3-small'))
+    vectorstore = Chroma.from_documents(split_docs, OpenAIEmbeddings(model='text-embedding-3-small'), persist_directory=None)  # Cloud에서도 OK, 임시 메모리에 저장
     return vectorstore
 
 #검색된 문서를 하나의 텍스트로 합치는 헬퍼 함수
