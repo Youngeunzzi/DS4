@@ -10,9 +10,9 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 
-#Chroma tenant 오류 방지 위한 코드
-import chromadb
-chromadb.api.client.SharedSystemClient.clear_system_cache()
+# #Chroma tenant 오류 방지 위한 코드
+# import chromadb
+# chromadb.api.client.SharedSystemClient.clear_system_cache()
 
 # 안전하게 API 키를 가져오는 방식
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
