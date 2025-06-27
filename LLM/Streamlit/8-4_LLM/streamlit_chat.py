@@ -25,6 +25,7 @@ if prompt := st.chat_input():
     #chat_message()함수로 사용자 채팅 버블에 prompt 메시지를 기록
     st.chat_message("user").write(prompt)
 
+    
     response = chat.invoke(prompt)
     msg = response.content
 
