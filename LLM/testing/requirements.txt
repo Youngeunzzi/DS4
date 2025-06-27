@@ -3,7 +3,6 @@ langchain_community
 langchain_openai
 langchain-anthropic
 langchain-text-splitters
-langchain-chroma
 langchain-ollama
 langchain-experimental
 
