@@ -15,4 +15,4 @@ rapidocr-onnxruntime
 sentence-transformers
 unstructured
 python-pptx
-python-magic>=0.4.15  ← ✅ 교체
+python-magic>=0.4.15  
