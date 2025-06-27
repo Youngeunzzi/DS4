@@ -2,10 +2,7 @@ import os
 import streamlit as st
 from langchain_openai import ChatOpenAI
 
-from dotenv import load_dotenv
-
-load_dotenv()
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+os.environ["OPENAI_API_KEY"] = "YOUR_OPENAI_API_KEY"
 
 st.title("💬 Chatbot")
 
