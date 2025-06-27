@@ -1,3 +1,6 @@
+streamlit
+chromadb>=0.4.24
+
 langchain
 langchain_community
 langchain_openai
@@ -6,8 +9,10 @@ langchain-text-splitters
 langchain-chroma
 langchain-ollama
 langchain-experimental
-anthropic
+
 openai
+anthropic
+
 nltk==3.8.1
 pypdfium2
 pypdf
@@ -15,4 +20,4 @@ rapidocr-onnxruntime
 sentence-transformers
 unstructured
 python-pptx
-python-magic>=0.4.15  
+python-magic>=0.4.15
