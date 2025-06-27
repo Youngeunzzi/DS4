@@ -15,10 +15,7 @@ import chromadb
 chromadb.api.client.SharedSystemClient.clear_system_cache()
 
 #오픈AI API 키 설정
-from dotenv import load_dotenv
-
-load_dotenv()
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+os.environ["OPENAI_API_KEY"] = "YOUR_OPENAI_API_KEY"
 
 #cache_resource로 한번 실행한 결과 캐싱해두기
 @st.cache_resource
@@ -97,3 +94,4 @@ if uploaded_file is not None:
                 response = rag_chain.invoke(prompt_message)
                 st.session_state.messages.append({"role": "assistant", "content": response})
                 st.write(response)
+                
