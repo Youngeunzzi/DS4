@@ -15,11 +15,10 @@ pypdfium2
 pypdf
 rapidocr-onnxruntime
 sentence-transformers
-unstructured
 unstructured[pdf]
 
 python-pptx
 
 faiss-cpu
-grandalf 
+grandalf
 streamlit
