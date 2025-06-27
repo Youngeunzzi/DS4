@@ -6,21 +6,13 @@ langchain-text-splitters
 langchain-chroma
 langchain-ollama
 langchain-experimental
-
 anthropic
 openai
-
 nltk==3.8.1
 pypdfium2
 pypdf
 rapidocr-onnxruntime
 sentence-transformers
 unstructured
-unstructured[pdf]
-
 python-pptx
-python-magic-bin==0.4.14
-
-faiss-cpu
-grandalf 
-streamlit
+python-magic>=0.4.15  ← ✅ 교체
