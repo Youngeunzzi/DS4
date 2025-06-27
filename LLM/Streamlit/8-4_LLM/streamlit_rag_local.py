@@ -10,10 +10,7 @@ from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 
 #오픈AI API 키 설정
-from dotenv import load_dotenv
-
-load_dotenv()
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+os.environ["OPENAI_API_KEY"] = "YOUR_OPENAI_API_KEY"
 
 @st.cache_resource
 def load_and_split_pdf(file_path):
@@ -101,3 +98,4 @@ if prompt_message := st.chat_input("질문을 입력해주세요 :)"):
             response = rag_chain.invoke(prompt_message)
             st.session_state.messages.append({"role": "assistant", "content": response})
             st.write(response)
+            
