@@ -1,6 +1,7 @@
 streamlit==1.32.0
 langchain==0.1.17
 langchain-openai==0.1.6
+langchain-chroma==0.0.3
 openai==1.25.0
 chromadb==0.4.24
 
@@ -12,5 +13,4 @@ nltk==3.8.1
 
 sentence-transformers==2.2.2
 faiss-cpu==1.7.4
-
 tqdm==4.66.1
