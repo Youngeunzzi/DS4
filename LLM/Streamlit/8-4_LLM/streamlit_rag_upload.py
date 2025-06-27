@@ -12,7 +12,6 @@ from langchain_core.output_parsers import StrOutputParser
 
 #Chroma tenant 오류 방지 위한 코드
 import chromadb
-chromadb.api.client.SharedSystemClient.clear_system_cache()
 
 #오픈AI API 키 설정
 os.environ["OPENAI_API_KEY"] = "YOUR_OPENAI_API_KEY"
