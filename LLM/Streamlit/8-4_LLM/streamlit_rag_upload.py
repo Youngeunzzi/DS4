@@ -10,8 +10,6 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 
-#Chroma tenant 오류 방지 위한 코드
-import chromadb
 
 #오픈AI API 키 설정
 os.environ["OPENAI_API_KEY"] = "YOUR_OPENAI_API_KEY"
