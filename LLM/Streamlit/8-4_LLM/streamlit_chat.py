@@ -2,7 +2,10 @@ import os
 import streamlit as st
 from langchain_openai import ChatOpenAI
 
-os.environ["OPENAI_API_KEY"] = "YOUR_OPENAI_API_KEY"
+
+# 안전하게 API 키를 가져오는 방식
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+
 
 st.title("💬 Chatbot")
 
