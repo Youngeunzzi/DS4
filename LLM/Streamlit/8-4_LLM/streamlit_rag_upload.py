@@ -14,8 +14,9 @@ from langchain_core.output_parsers import StrOutputParser
 import chromadb
 chromadb.api.client.SharedSystemClient.clear_system_cache()
 
-#오픈AI API 키 설정
-os.environ["OPENAI_API_KEY"] = "YOUR_OPENAI_API_KEY"
+# 안전하게 API 키를 가져오는 방식
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+
 
 #cache_resource로 한번 실행한 결과 캐싱해두기
 @st.cache_resource
