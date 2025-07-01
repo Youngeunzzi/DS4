@@ -5,8 +5,8 @@ import os
 import json
 import pandas as pd
 import numpy as np
-from langchain.vectorstores import FAISS
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import FAISS
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain.llms import OpenAI
 from langchain.chains import RetrievalQA
 
@@ -61,13 +61,13 @@ def build_vectorstore(tifu_path, aita_path, embedding_model="sentence-transforme
 @st.cache_resource
 def load_vectorstore(index_dir, embedding_model="sentence-transformers/all-MiniLM-L6-v2"):
     embeddings = HuggingFaceEmbeddings(model_name=embedding_model)
-    return FAISS.load_local(index_dir, embeddings)
+    # allow_dangerous_deserialization=True 로 pickle 로드 허용
+    return FAISS.load_local(index_dir, embeddings, allow_dangerous_deserialization=True)
 
 # 3. QA 체인
 @st.cache_resource
 def init_qa_chain(vectorstore):
     retriever = vectorstore.as_retriever(search_kwargs={"k":5})
-    # OpenAI API 키는 st.secrets에서 불러옵니다
     openai_key = st.secrets["openai"]["api_key"]
     llm = OpenAI(
         model_name="gpt-4o-mini",
@@ -136,7 +136,6 @@ def main():
             st.markdown(f"  **답변:** {entry['a']}\n")
 
 if __name__ == '__main__':
-    # 전역 초기화
     vectorstore = load_vectorstore("./vectorstore")
     qa_chain = init_qa_chain(vectorstore)
     main()
