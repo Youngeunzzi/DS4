@@ -136,6 +136,19 @@ def main():
             st.markdown(f"  **답변:** {entry['a']}\n")
 
 if __name__ == '__main__':
-    vectorstore = load_vectorstore("./vectorstore")
+    # 기본 경로 설정
+    default_tifu = "./data/tifu_json"
+    default_aita = "./data/aita_json"
+    default_index = "./vectorstore"
+
+    # 색인 파일 존재 여부 확인
+    index_file = os.path.join(default_index, 'index.faiss')
+    if not os.path.exists(index_file):
+        st.warning("vectorstore가 존재하지 않습니다. 데이터 폴더를 불러와 색인을 생성합니다...")
+        build_vectorstore(default_tifu, default_aita, index_dir=default_index)
+
+    # 벡터스토어 로드 및 QA 체인 초기화
+    vectorstore = load_vectorstore(default_index)
     qa_chain = init_qa_chain(vectorstore)
+
     main()
