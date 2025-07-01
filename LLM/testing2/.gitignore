@@ -1,0 +1,16 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# FAISS 인덱스 및 메타데이터
+vectorstore/
+metadata.pkl
+index.faiss
+
+# Streamlit 캐시 및 시크릿
+.streamlit/secrets.toml
+.streamlit/cache/
+
+# 기타
+*.log
