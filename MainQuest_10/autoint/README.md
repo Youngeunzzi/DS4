@@ -36,9 +36,8 @@ AutoInt+ 모델의 성능 향상을 위해 총 2가지 실험을 진행하였으
 
 ## 🎥 Streamlit 시연 결과
 
-아래는 사용자 ID와 추천 조건(연도/월)을 입력한 뒤, 영화 추천 결과를 확인하는 Streamlit 인터페이스 시연 화면입니다.
-
 <p align="center">
-  <img src="MainQuest_10/autoint/img/demo_1.png" width="45%"/>
-  <img src="MainQuest_10/autoint/img/demo_2.png" width="45%"/>
+  <img src="img/demo_1.png" width="45%"/>
+  <img src="img/demo_2.png" width="45%"/>
 </p>
+
